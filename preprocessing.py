@@ -8,7 +8,7 @@ def convert_box(size, box):
 
 def convert_voc_to_yolo():
     for anno in os.listdir('./data/labels'):
-        if anno.split('.')[1] == 'xml':
+        if  anno.endswith('xml'):
             file_name = anno.split('.')[0]
             out_file = open(f'./data/labels/{file_name}.txt', 'w')
 
